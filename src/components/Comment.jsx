@@ -4,10 +4,10 @@ import { Avatar } from './Avatar';
 
 import styles from './Comment.module.css';
 
-export function Comment() {
+export function Comment({ content }) {
   return (
     <div className={styles.comment}>
-      <Avatar hasBorder={false} src="https://github.com/ICarlosJuniorI.png"/>
+      <Avatar hasBorder={false} src="https://github.com/ICarlosJuniorI.png" />
 
       <div className={styles.commentBox}>
         <div className={styles.commentContent}>
@@ -18,11 +18,11 @@ export function Comment() {
             </div>
 
             <button title="Deletar comentário">
-              <Trash size={20}/>
+              <Trash size={20} />
             </button>
           </header>
 
-          <p>Muito bom, parabéns!!</p>
+          <p>{content}</p>
         </div>
 
         <footer>
